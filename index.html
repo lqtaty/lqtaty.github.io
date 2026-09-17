@@ -109,12 +109,12 @@
             fill: #ffffff;
         }
 
-        /* ستايل صورة سناب شات: عزل الخلفية السوداء وتصغير الحجم لنصف المساحة مقارنة بباقي الأيقونات */
+        /* ستايل صورة سناب شات: نفس مقاس باقي الأيقونات (32px) مع عزل الخلفية السوداء */
         .snapchat-img {
-            width: 23px; /* حجم أصغر متناسق */
-            height: 23px;
+            width: 32px;
+            height: 32px;
             object-fit: contain;
-            mix-blend-mode: screen; /* بيحذف الخلفية السوداء ويسيب الأبيض الناصع فقط */
+            mix-blend-mode: screen; /* إخفاء الخلفية السوداء وإظهار الشبح الأبيض بنفس النقاء */
         }
     </style>
 </head>
@@ -138,7 +138,7 @@
         <!-- أيقونات التواصل الاجتماعي الثلاثة -->
         <div class="social-icons">
             
-            <!-- 1. Snapchat (تم استخدام اسم الملف المضبوط Snapchat.webp) -->
+            <!-- 1. Snapchat -->
             <a href="حط_رابط_السناب_هنا" target="_blank" aria-label="Snapchat">
                 <img src="images/Snapchat.webp" alt="Snapchat" class="snapchat-img">
             </a>
