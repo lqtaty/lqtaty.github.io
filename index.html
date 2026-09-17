@@ -78,15 +78,14 @@
             text-align: center;
         }
         
-        /* حاوية الأيقونات في المنتصف بمسافات متساوية */
+        /* حاوية الأيقونات بمسافات متساوية بالمللي وعرض محدد متناسق */
         .social-icons {
             display: flex;
-            gap: 28px;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
+            width: 220px; /* عرض ثابت بيضمن تساوي المسافات تماماً بين الثلاث أيقونات */
             margin-bottom: 20px;
             direction: ltr; 
-            width: 100%;
         }
         
         .social-icons a {
@@ -109,12 +108,12 @@
             fill: #ffffff;
         }
 
-        /* ستايل صورة سناب شات: نفس مقاس باقي الأيقونات (32px) مع عزل الخلفية السوداء */
+        /* ستايل صورة سناب شات: تكبير الحجم قليلاً (36px) لضبط التوازن وعزل الخلفية السوداء */
         .snapchat-img {
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             object-fit: contain;
-            mix-blend-mode: screen; /* إخفاء الخلفية السوداء وإظهار الشبح الأبيض بنفس النقاء */
+            mix-blend-mode: screen; /* إخفاء الخلفية السوداء وإظهار الأبيض الناصع فقط */
         }
     </style>
 </head>
@@ -135,7 +134,7 @@
             تابعنا علي باقي المنصات عشان تشوف كل جديد بي استمرار
         </p>
 
-        <!-- أيقونات التواصل الاجتماعي الثلاثة -->
+        <!-- أيقونات التواصل الاجتماعي الثلاثة بمسافات متساوية -->
         <div class="social-icons">
             
             <!-- 1. Snapchat -->
