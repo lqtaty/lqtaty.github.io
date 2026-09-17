@@ -122,7 +122,7 @@
             mix-blend-mode: screen;
         }
 
-        /* --- تصميم قوائم المتاجر (نون و شي إن) --- */
+        /* --- تصميم قوائم المتاجر (noon و SHEIN) --- */
         .stores-container {
             width: 100%;
             max-width: 420px;
@@ -185,13 +185,13 @@
             background-color: rgba(255, 255, 255, 0.1);
         }
 
-        /* كلاس تفعيل القائمة (يتم إضافته بالـ JavaScript) */
+        /* كلاس تفعيل القائمة */
         .store-dropdown.active .store-options {
-            max-height: 200px; /* يكفي لتوسيع الـ 3 خيارات براحة */
+            max-height: 200px;
         }
 
         .store-dropdown.active .arrow {
-            transform: rotate(180deg); /* لف السهم للأعلى عند الفتح */
+            transform: rotate(180deg);
         }
     </style>
 </head>
@@ -232,13 +232,13 @@
 
         </div>
 
-        <!-- قايمتين المتاجر (نون و شي إن) -->
+        <!-- قايمتين المتاجر (noon و SHEIN) -->
         <div class="stores-container">
             
-            <!-- متجر نون (Noon) -->
+            <!-- متجر noon -->
             <div class="store-dropdown" id="noonDropdown">
                 <div class="store-header" onclick="toggleStore('noonDropdown')">
-                    <span>متجر نون - Noon</span>
+                    <span>متجر noon</span>
                     <span class="arrow">▼</span>
                 </div>
                 <div class="store-options">
@@ -248,10 +248,10 @@
                 </div>
             </div>
 
-            <!-- متجر شي إن (SHEIN) -->
+            <!-- متجر SHEIN -->
             <div class="store-dropdown" id="sheinDropdown">
                 <div class="store-header" onclick="toggleStore('sheinDropdown')">
-                    <span>متجر شي إن - SHEIN</span>
+                    <span>متجر SHEIN</span>
                     <span class="arrow">▼</span>
                 </div>
                 <div class="store-options">
@@ -264,17 +264,15 @@
         </div>
     </div>
 
-    <!-- كود JavaScript بسيط عشان القائمة تفتح وتتقفل بسلاسة بالسهم -->
+    <!-- كود JavaScript للقوائم المنسدلة -->
     <script>
         function toggleStore(dropdownId) {
             const dropdown = document.getElementById(dropdownId);
-            // إغلاق القائمة الأخرى إذا كانت مفتوحة (اختياري، لترتيب أفضل)
             document.querySelectorAll('.store-dropdown').forEach(item => {
                 if (item.id !== dropdownId) {
                     item.classList.remove('active');
                 }
             });
-            // تبديل حالة القائمة الحالية
             dropdown.classList.toggle('active');
         }
     </script>
