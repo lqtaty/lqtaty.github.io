@@ -109,18 +109,19 @@
             fill: #ffffff;
         }
 
-        /* تنسيق صورة سناب شات المفرغة */
+        /* ستايل صورة سناب شات: عزل الخلفية السوداء وتصغير الحجم لنصف المساحة مقارنة بباقي الأيقونات */
         .snapchat-img {
-            width: 32px;
-            height: 32px;
+            width: 23px; /* حجم أصغر متناسق */
+            height: 23px;
             object-fit: contain;
+            mix-blend-mode: screen; /* بيحذف الخلفية السوداء ويسيب الأبيض الناصع فقط */
         }
     </style>
 </head>
 <body>
 
     <div class="content">
-        <!-- صورة اللوجو -->
+        <!-- صورة اللوجو الرئيسي -->
         <div class="profile-pic-container">
             <img src="images/logo.webp" alt="Lqtaty Logo">
         </div>
@@ -128,18 +129,18 @@
         <!-- اسم البراند -->
         <h1>@Lqtaty</h1>
 
-        <!-- الوصف مقسم لسطرين بالظبط من غير أي أسهم -->
+        <!-- الوصف مقسم لسطرين بالظبط -->
         <p class="bio">
             أقوي عروض و أكواد خصم علي نون و شي إن في السعودية،<br>
             تابعنا علي باقي المنصات عشان تشوف كل جديد بي استمرار
         </p>
 
-        <!-- أيقونات التواصل الاجتماعي -->
+        <!-- أيقونات التواصل الاجتماعي الثلاثة -->
         <div class="social-icons">
             
-            <!-- 1. Snapchat -->
+            <!-- 1. Snapchat (تم استخدام اسم الملف المضبوط Snapchat.webp) -->
             <a href="حط_رابط_السناب_هنا" target="_blank" aria-label="Snapchat">
-                <img src="images/snapchat.png" alt="Snapchat" class="snapchat-img">
+                <img src="images/Snapchat.webp" alt="Snapchat" class="snapchat-img">
             </a>
 
             <!-- 2. TikTok -->
