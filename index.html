@@ -14,7 +14,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; /* رفع المحتوى للأعلى */
             min-height: 100vh;
             text-align: center;
         }
@@ -24,7 +24,7 @@
             align-items: center;
             width: 100%;
             max-width: 600px;
-            padding: 20px;
+            padding: 40px 20px 20px 20px; /* مسافة خفيفة من فوق عشان مايلزقش في أطراف الشاشة أوي */
         }
         /* دائرة الصورة الدائرية البيضاء */
         .profile-pic-container {
@@ -36,7 +36,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
         .profile-pic-container img {
@@ -47,13 +47,13 @@
         h1 {
             font-size: 22px;
             font-weight: 700;
-            margin: 0 0 16px 0;
+            margin: 0 0 12px 0;
             letter-spacing: -0.5px;
         }
         p.bio {
             font-size: 15px;
             line-height: 1.6;
-            margin: 0 0 35px 0;
+            margin: 0 0 24px 0;
             padding: 0 24px;
             max-width: 450px;
             font-weight: 400;
@@ -64,6 +64,7 @@
             gap: 24px;
             align-items: center;
             justify-content: center;
+            margin-bottom: 30px; /* مسافة تحت الأيقونات عشان أزرار المتاجر الجديدة بعدين */
         }
         .social-icons a {
             color: #ffffff;
@@ -86,7 +87,7 @@
 <body>
 
     <div class="content">
-        <!-- مسار الصورة المربوط بالفولدر وملف logo.webp -->
+        <!-- دائرة الصورة المربوطة بفولدر images وملف logo.webp -->
         <div class="profile-pic-container">
             <img src="images/logo.webp" alt="Lqtaty Logo">
         </div>
