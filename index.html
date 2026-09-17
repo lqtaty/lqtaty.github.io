@@ -14,7 +14,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             min-height: 100vh;
             text-align: center;
         }
@@ -22,9 +22,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 60px;
             width: 100%;
             max-width: 600px;
+            padding: 20px;
         }
         /* دائرة الصورة الدائرية البيضاء */
         .profile-pic-container {
@@ -53,7 +53,7 @@
         p.bio {
             font-size: 15px;
             line-height: 1.6;
-            margin: 0 0 30px 0;
+            margin: 0 0 35px 0;
             padding: 0 24px;
             max-width: 450px;
             font-weight: 400;
@@ -62,7 +62,6 @@
         .social-icons {
             display: flex;
             gap: 24px;
-            margin-bottom: 40px;
             align-items: center;
             justify-content: center;
         }
@@ -82,29 +81,14 @@
             height: 28px;
             fill: currentColor;
         }
-        /* حقوق الطبع والنشر وتذييل الصفحة */
-        footer {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.7);
-            padding-bottom: 30px;
-            line-height: 1.8;
-        }
-        footer a {
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            margin: 0 6px;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
 
     <div class="content">
-        <!-- دائرة الصورة (يمكنك استبدال رابط الصورة في src بصورة شعار النخلة أو السيفين) -->
+        <!-- دائرة الصورة -->
         <div class="profile-pic-container">
-            <img src="https://upload.wikimedia.org/wikipedia5/commons/thumb/0/0d/Emblem_of_Saudi_Arabia.svg/1200px-Emblem_of_Saudi_Arabia.svg.png" alt="Profile Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Emblem_of_Saudi_Arabia.svg/1200px-Emblem_of_Saudi_Arabia.svg.png" alt="Profile Logo">
         </div>
 
         <!-- اسم الحساب -->
@@ -129,14 +113,6 @@
             </a>
         </div>
     </div>
-
-    <!-- تذييل الصفحة (Footer) -->
-    <footer>
-        <div>
-            <a href="#">Cookie Preferences</a> • <a href="#">Report</a> • <a href="#">Privacy</a>
-        </div>
-        <div style="margin-top: 4px;">More from Linktree</div>
-    </footer>
 
 </body>
 </html>
