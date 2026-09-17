@@ -59,7 +59,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 26px;
             font-weight: 700;
-            margin: 0 0 24px 0; /* زيادة المسافة الفارغة أسفل الاسم بوضوح لراحة العين */
+            margin: 0 0 24px 0;
             letter-spacing: 0.5px;
             direction: ltr;
             unicode-bidi: bidi-override;
@@ -161,7 +161,7 @@
             font-size: 14px;
         }
 
-        /* الخيارات السفلية (مخفية افتراضياً وتظهر عند الضغط) */
+        /* الخيارات السفلية */
         .store-options {
             max-height: 0;
             overflow: hidden;
@@ -171,7 +171,8 @@
             flex-direction: column;
         }
 
-        .store-options a {
+        /* تصميم عناصر القائمة والروابط وأزرار النسخ */
+        .store-options a, .store-options .copy-option {
             padding: 12px 20px;
             color: #ffffff;
             text-decoration: none;
@@ -179,19 +180,79 @@
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             transition: background-color 0.2s;
             text-align: right;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
         }
 
-        .store-options a:hover {
+        .store-options a:hover, .store-options .copy-option:hover {
             background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* تنسيق أيقونة النسخ وجانب النص */
+        .option-text {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+
+        .option-subtext {
+            font-size: 11px;
+            color: #d1d1d1;
+            margin-top: 2px;
+        }
+
+        .copy-icon-svg {
+            width: 18px;
+            height: 18px;
+            fill: #ffffff;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .copy-option:hover .copy-icon-svg {
+            opacity: 1;
         }
 
         /* كلاس تفعيل القائمة */
         .store-dropdown.active .store-options {
-            max-height: 200px;
+            max-height: 250px;
         }
 
         .store-dropdown.active .arrow {
             transform: rotate(180deg);
+        }
+
+        /* رسالة التنبيه العائمة عند النسخ */
+        #toast {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: #ffffff;
+            color: #1b4d2e;
+            text-align: center;
+            border-radius: 8px;
+            padding: 10px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadeInOut 2s ease;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translate(-50%, 20px); }
+            20% { opacity: 1; transform: translate(-50%, 0); }
+            80% { opacity: 1; transform: translate(-50%, 0); }
+            100% { opacity: 0; transform: translate(-50%, -20px); }
         }
     </style>
 </head>
@@ -242,13 +303,36 @@
                     <span class="arrow">▼</span>
                 </div>
                 <div class="store-options">
-                    <a href="#">الخيار الأول (فارغ)</a>
-                    <a href="#">الخيار الثاني (فارغ)</a>
-                    <a href="#">الخيار الثالث (فارغ)</a>
+                    <!-- الخيار الأول: رابط الأفيليت العام -->
+                    <a href="https://s.noon.com/RqQ_OuShh-Q" target="_blank">
+                        <span>تسوق علي المتجر الآن</span>
+                        <span style="font-size: 16px;">↗</span>
+                    </a>
+                    
+                    <!-- الخيار الثاني: كود الخصم الأساسي للنسخ -->
+                    <div class="copy-option" onclick="copyCode('LQ170A')">
+                        <div class="option-text">
+                            <span>كود الخصم الأساسي: LQ170A</span>
+                        </div>
+                        <svg class="copy-icon-svg" viewBox="0 0 24 24">
+                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                        </svg>
+                    </div>
+
+                    <!-- الخيار الثالث: أكواد الخصم المؤقته للنسخ -->
+                    <div class="copy-option" onclick="copyCode('VOKJH')">
+                        <div class="option-text">
+                            <span>أكواد الخصم المؤقته: VOKJH</span>
+                            <span class="option-subtext">لمدة اسبوع</span>
+                        </div>
+                        <svg class="copy-icon-svg" viewBox="0 0 24 24">
+                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
 
-            <!-- متجر شي إن - SHEIN -->
+            <!-- متجر شي إن - SHEIN (جاهز للخوارزميات بتاعته لما نشتغله) -->
             <div class="store-dropdown" id="sheinDropdown">
                 <div class="store-header" onclick="toggleStore('sheinDropdown')">
                     <span>متجر شي إن - SHEIN</span>
@@ -264,7 +348,10 @@
         </div>
     </div>
 
-    <!-- كود JavaScript للقوائم المنسدلة -->
+    <!-- رسالة التنبيه العائمة عند النسخ -->
+    <div id="toast">تم نسخ الكود بنجاح!</div>
+
+    <!-- كود JavaScript للقوائم والنسخ -->
     <script>
         function toggleStore(dropdownId) {
             const dropdown = document.getElementById(dropdownId);
@@ -274,6 +361,17 @@
                 }
             });
             dropdown.classList.toggle('active');
+        }
+
+        function copyCode(code) {
+            navigator.clipboard.writeText(code).then(() => {
+                const toast = document.getElementById('toast');
+                toast.innerText = "تم نسخ الكود (" + code + ") بنجاح! 📋";
+                toast.className = "show";
+                setTimeout(() => { toast.className = ""; }, 2500);
+            }).catch(err => {
+                console.error('فشل النسخ', err);
+            });
         }
     </script>
 
