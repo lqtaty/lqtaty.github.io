@@ -217,7 +217,7 @@
 
         /* كلاس تفعيل القائمة */
         .store-dropdown.active .store-options {
-            max-height: 250px;
+            max-height: 280px;
         }
 
         .store-dropdown.active .arrow {
@@ -293,23 +293,20 @@
 
         </div>
 
-        <!-- قايمتين المتاجر -->
+        <!-- قايمتين المتاجر بالترتيب المطلوب: نون -> أمازون -> شي إن -->
         <div class="stores-container">
             
-            <!-- متجر نون - noon -->
+            <!-- 1. متجر نون - noon -->
             <div class="store-dropdown" id="noonDropdown">
                 <div class="store-header" onclick="toggleStore('noonDropdown')">
                     <span>متجر نون - noon</span>
                     <span class="arrow">▼</span>
                 </div>
                 <div class="store-options">
-                    <!-- الخيار الأول: رابط الأفيليت العام -->
                     <a href="https://s.noon.com/RqQ_OuShh-Q" target="_blank">
                         <span>تسوق علي المتجر الآن</span>
                         <span style="font-size: 16px;">↗</span>
                     </a>
-                    
-                    <!-- الخيار الثاني: كود الخصم الأساسي للنسخ -->
                     <div class="copy-option" onclick="copyCode('LQ170A')">
                         <div class="option-text">
                             <span>كود الخصم الأساسي: LQ170A</span>
@@ -318,8 +315,6 @@
                             <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
                         </svg>
                     </div>
-
-                    <!-- الخيار الثالث: أكواد الخصم المؤقته للنسخ -->
                     <div class="copy-option" onclick="copyCode('VOKJH')">
                         <div class="option-text">
                             <span>أكواد الخصم المؤقته: VOKJH</span>
@@ -332,7 +327,38 @@
                 </div>
             </div>
 
-            <!-- متجر شي إن - SHEIN (جاهز للخوارزميات بتاعته لما نشتغله) -->
+            <!-- 2. متجر أمازون - Amazon (قائمة منسدلة متكاملة بالترتيب الثاني) -->
+            <div class="store-dropdown" id="amazonDropdown">
+                <div class="store-header" onclick="toggleStore('amazonDropdown')">
+                    <span>متجر أمازون - Amazon</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="store-options">
+                    <a href="https://www.amazon.sa?tag=lqtatyy26-21" target="_blank">
+                        <span>تسوق علي أمازون السعودية</span>
+                        <span style="font-size: 16px;">↗</span>
+                    </a>
+                    <div class="copy-option" onclick="copyCode('lqtatyy26-21')">
+                        <div class="option-text">
+                            <span>معرّف المتجر: lqtatyy26-21</span>
+                            <span class="option-subtext">رابط الأفيليت الأساسي</span>
+                        </div>
+                        <svg class="copy-icon-svg" viewBox="0 0 24 24">
+                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                        </svg>
+                    </div>
+                    <div class="copy-option" onclick="copyCode('https://www.amazon.sa?tag=lqtatyy26-21')">
+                        <div class="option-text">
+                            <span>نسخ رابط المتجر بالكامل</span>
+                        </div>
+                        <svg class="copy-icon-svg" viewBox="0 0 24 24">
+                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. متجر شي إن - SHEIN -->
             <div class="store-dropdown" id="sheinDropdown">
                 <div class="store-header" onclick="toggleStore('sheinDropdown')">
                     <span>متجر شي إن - SHEIN</span>
@@ -366,7 +392,7 @@
         function copyCode(code) {
             navigator.clipboard.writeText(code).then(() => {
                 const toast = document.getElementById('toast');
-                toast.innerText = "تم نسخ الكود (" + code + ") بنجاح! 📋";
+                toast.innerText = "تم نسخ (" + code + ") بنجاح! 📋";
                 toast.className = "show";
                 setTimeout(() => { toast.className = ""; }, 2500);
             }).catch(err => {
