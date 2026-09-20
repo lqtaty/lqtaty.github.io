@@ -108,14 +108,14 @@
             fill: #ffffff;
         }
 
-        /* تخصيص أيقونة إكس (تم تصغيرها درجة لتصبح 30px) */
+        /* تخصيص أيقونة إكس (30px) */
         .x-icon {
             width: 30px !important;
             height: 30px !important;
             fill: #ffffff;
         }
 
-        /* تخصيص أيقونة الفيسبوك (حرف f - تم تكبيره درجة ليصبح 33px) */
+        /* تخصيص أيقونة الفيسبوك (حرف f - 33px) */
         .fb-icon {
             width: 33px !important;
             height: 33px !important;
@@ -198,6 +198,43 @@
             background-color: rgba(255, 255, 255, 0.1);
         }
 
+        /* تنسيق زر القنوات المزدوج (تيليجرام + واتساب مقسوم نصين) */
+        .dual-channel-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 !important;
+            background-color: rgba(0, 136, 204, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+        }
+
+        .channel-half {
+            flex: 1;
+            padding: 12px 10px;
+            text-align: center;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12.5px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .channel-half:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* خط الفاصل الكامل في المنتصف بين الزرين */
+        .channel-divider {
+            width: 1px;
+            height: 24px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
         /* تنسيق أيقونة النسخ وجانب النص */
         .option-text {
             display: flex;
@@ -225,7 +262,7 @@
 
         /* كلاس تفعيل القائمة */
         .store-dropdown.active .store-options {
-            max-height: 350px;
+            max-height: 380px;
         }
 
         .store-dropdown.active .arrow {
@@ -337,11 +374,16 @@
                             <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
                         </svg>
                     </div>
-                    <!-- رابط قناة نون (Lqtaty) -->
-                    <a href="https://t.me/Lqtaty" target="_blank" style="background-color: rgba(0, 136, 204, 0.2);">
-                        <span>📢 انضم الآن لقناة التليجرام</span>
-                        <span style="font-size: 16px;">↗</span>
-                    </a>
+                    <!-- زر قنوات نون (تيليجرام + واتساب مقسوم نصين) -->
+                    <div class="dual-channel-btn">
+                        <a href="https://t.me/Lqtaty" target="_blank" class="channel-half">
+                            <span>تيليجرام</span>
+                        </a>
+                        <div class="channel-divider"></div>
+                        <a href="https://whatsapp.com/channel/0029VbDA4wEIHphE2hbuTp19" target="_blank" class="channel-half">
+                            <span>واتساب</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -373,11 +415,16 @@
                             <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
                         </svg>
                     </div>
-                    <!-- رابط قناة أمازون (Lqtatyy) -->
-                    <a href="https://t.me/Lqtatyy" target="_blank" style="background-color: rgba(0, 136, 204, 0.2);">
-                        <span>📢 انضم الآن لقناة التليجرام</span>
-                        <span style="font-size: 16px;">↗</span>
-                    </a>
+                    <!-- زر قنوات أمازون (تيليجرام + واتساب مقسوم نصين) -->
+                    <div class="dual-channel-btn">
+                        <a href="https://t.me/Lqtatyy" target="_blank" class="channel-half">
+                            <span>تيليجرام</span>
+                        </a>
+                        <div class="channel-divider"></div>
+                        <a href="https://whatsapp.com/channel/0029Vb8OCOsDJ6H8hkqWgo0O" target="_blank" class="channel-half">
+                            <span>واتساب</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -400,11 +447,16 @@
                             <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
                         </svg>
                     </div>
-                    <!-- رابط قناة شي إن (Lqtatyyy) -->
-                    <a href="https://t.me/Lqtatyyy" target="_blank" style="background-color: rgba(0, 136, 204, 0.2);">
-                        <span>📢 انضم الآن لقناة التليجرام</span>
-                        <span style="font-size: 16px;">↗</span>
-                    </a>
+                    <!-- زر قنوات شي إن (تيليجرام + واتساب مقسوم نصين) -->
+                    <div class="dual-channel-btn">
+                        <a href="https://t.me/Lqtatyyy" target="_blank" class="channel-half">
+                            <span>تيليجرام</span>
+                        </a>
+                        <div class="channel-divider"></div>
+                        <a href="https://whatsapp.com/channel/0029Vb8WoBnJENxyP8Dt7k0Q" target="_blank" class="channel-half">
+                            <span>واتساب</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
