@@ -271,25 +271,25 @@
             transform: rotate(180deg);
         }
 
-        /* --- تصميم الفوتر والإفصاح الكامل في سطرين وأسفل الصفحة تماماً --- */
+        /* --- تصميم الفوتر والإفصاح الكامل في سطرين بعرض الشاشة بالكامل في الأسفل --- */
         footer {
             width: 100%;
-            max-width: 460px;
-            padding: 10px 10px 20px 10px;
-            margin: 0 auto;
+            padding: 10px 10px 25px 10px;
+            margin-top: auto;
             text-align: center;
         }
 
         .footer-disclosure {
-            font-size: 9px; /* حجم خط دقيق يضمن عرض النص كاملاً في سطرين */
-            line-height: 1.4;
+            font-size: 8px; /* حجم صغير جداً يضمن عرض النص كاملاً في سطرين بدون قص */
+            line-height: 1.3;
             color: rgba(255, 255, 255, 0.45); /* لون هادئ وشفاف */
             direction: ltr; 
             text-align: center;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            max-width: 440px; /* مساحة عريضة كفاية لتسع النص كاملاً */
+            width: 100%;
+            max-width: 480px; /* مأخذ أقصى عرض للشاشة */
             margin: 0 auto;
-            word-spacing: 0.5px;
+            padding: 0 10px;
         }
 
         /* رسالة التنبيه العائمة عند النسخ */
