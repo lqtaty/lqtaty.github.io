@@ -46,7 +46,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            margin-bottom: 16px;
+            margin-bottom: 28px; /* تم زيادة المسافة الفارغة بين اللوجو واسم البراند لتناسب التنسيق المطلوب */
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
         .profile-pic-container img {
@@ -68,13 +68,13 @@
             width: 100%;
         }
 
-        /* الوصف بعد التعديل الإملائي وضبطه تماماً */
+        /* الوصف باللهجة السعودية وبحجم يوزع نفسه في سطرين أو تلاتة بالكثير */
         p.bio {
             font-size: 13px;
-            line-height: 1.8;
-            margin: 0 0 30px 0;
-            padding: 0 5px;
-            max-width: 460px;
+            line-height: 1.6;
+            margin: 0 auto 30px auto;
+            padding: 0 10px;
+            max-width: 340px; /* مقاس محدد يخلي الكلام ينزل في سطرين أو تلاتة بالظبط */
             font-weight: 400;
             text-align: center;
         }
@@ -332,9 +332,9 @@
         <!-- اسم البراند بدون @ -->
         <h1>Lqtaty</h1>
 
-        <!-- الوصف بعد الضبط الإملائي الشيك -->
+        <!-- الوصف باللهجة السعودية في سطرين أو ثلاثة -->
         <p class="bio">
-            واجهتك الأولى لأقوى وأحدث العروض وأكواد الخصم يومياً باستمرار
+            وجهتك الأولى لأقوى وأحدث العروض وأكواد الخصم باستمرار..<br>تابعنا على باقي المنصات ولا يفوتك أي شي!
         </p>
 
         <!-- أيقونات التواصل الاجتماعي -->
@@ -417,15 +417,6 @@
                         <span>تسوق علي المتجر الان</span>
                         <span style="font-size: 16px;">↗</span>
                     </a>
-                    <div class="copy-option" onclick="copyCode('lqtatyy26-21')">
-                        <div class="option-text">
-                            <span>معرّف المتجر: lqtatyy26-21</span>
-                            <span class="option-subtext">رابط الأفيليت الأساسي</span>
-                        </div>
-                        <svg class="copy-icon-svg" viewBox="0 0 24 24">
-                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-                        </svg>
-                    </div>
                     <!-- زر قنوات أمازون المزدوج -->
                     <div class="dual-channel-btn">
                         <a href="https://t.me/Lqtatyy" target="_blank" class="channel-half">
