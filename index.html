@@ -32,7 +32,8 @@
             width: 100%;
             max-width: 480px;
             margin: 0 auto;
-            padding: 40px 20px 40px 20px;
+            padding: 40px 20px 20px 20px;
+            flex: 1; /* عشان يدفع الفوتر ينزل للأسفل */
         }
         
         /* دائرة اللوجو الأساسية */
@@ -270,6 +271,24 @@
             transform: rotate(180deg);
         }
 
+        /* --- تصميم الفوتر والإفصاح الجديد --- */
+        footer {
+            width: 100%;
+            max-width: 440px;
+            padding: 20px 15px 30px 15px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-disclosure {
+            font-size: 10px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.55); /* أبيض شفاف */
+            direction: ltr; /* النص الإنجليزي من اليسار لليمين بشكل سليم */
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
         /* رسالة التنبيه العائمة عند النسخ */
         #toast {
             visibility: hidden;
@@ -454,6 +473,13 @@
 
         </div>
     </div>
+
+    <!-- الفوتر مع رسالة الإفصاح المخصصة -->
+    <footer>
+        <div class="footer-disclosure">
+            Disclosure: Lqtaty is reader-supported. We may earn an affiliate commission when you shop through our links and exclusive coupon codes on Amazon, Noon, Shein, and other partnered stores at no additional cost to you.
+        </div>
+    </footer>
 
     <!-- رسالة التنبيه العائمة عند النسخ -->
     <div id="toast">تم نسخ الكود بنجاح!</div>
