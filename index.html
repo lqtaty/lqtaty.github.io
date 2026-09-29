@@ -230,7 +230,7 @@
 
         .option-subtext {
             font-size: 11px;
-            color: #ffd700; /* لون ذهبي جذاب للتنبيهات المؤقتة */
+            color: #ffd700;
             margin-top: 2px;
             font-weight: 600;
         }
@@ -336,7 +336,7 @@
 
         <div class="stores-container">
             
-            <!-- متجر نون (بعد التعديلات الصارمة للتحويل) -->
+            <!-- متجر نون (بدون إيموجي) -->
             <div class="store-dropdown" id="noonDropdown">
                 <div class="store-header" onclick="toggleStore('noonDropdown')">
                     <span>متجر نون - noon</span>
@@ -349,7 +349,7 @@
                     </a>
                     <div class="copy-option" onclick="copyCode('LQ170A')">
                         <div class="option-text">
-                            <span>نسخ الكود الفعّال 🔥 [LQ170A]</span>
+                            <span>نسخ كود الخصم: LQ170A</span>
                         </div>
                         <svg class="copy-icon-svg" viewBox="0 0 24 24">
                             <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
@@ -357,7 +357,7 @@
                     </div>
                     <div class="copy-option" onclick="copyCode('VOKJH')">
                         <div class="option-text">
-                            <span>نسخ الكود الأقوى ⚡ [VOKJH]</span>
+                            <span>نسخ كود الخصم: VOKJH</span>
                             <span class="option-subtext">ساري لفترة محدودة (حتي ١٥ اكتوبر)</span>
                         </div>
                         <svg class="copy-icon-svg" viewBox="0 0 24 24">
@@ -457,7 +457,7 @@
         function copyCode(code) {
             navigator.clipboard.writeText(code).then(() => {
                 const toast = document.getElementById('toast');
-                toast.innerText = "تم نسخ (" + code + ") بنجاح! 📋";
+                toast.innerText = "تم نسخ (" + code + ") بنجاح!";
                 toast.className = "show";
                 setTimeout(() => { toast.className = ""; }, 2500);
             }).catch(err => {
