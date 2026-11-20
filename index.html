@@ -31,7 +31,7 @@
             width: 100%;
             max-width: 480px;
             margin: 0 auto;
-            padding: 36px 18px 20px 18px;
+            padding: 36px 16px 20px 16px;
             flex: 1;
         }
         
@@ -125,60 +125,60 @@
         /* تكبير حاوية المتاجر والمستطيلات */
         .stores-container {
             width: 100%;
-            max-width: 440px;
+            max-width: 460px;
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 20px;
         }
 
         .store-dropdown {
-            background-color: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.24);
-            border-radius: 16px;
+            background-color: rgba(255, 255, 255, 0.13);
+            border: 1px solid rgba(255, 255, 255, 0.26);
+            border-radius: 18px;
             overflow: hidden;
             transition: background-color 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
         }
 
         .store-header {
-            padding: 20px 22px;
-            min-height: 66px;
+            padding: 22px 24px;
+            min-height: 72px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 700;
             color: #ffffff;
             user-select: none;
         }
 
         .store-header:hover {
-            background-color: rgba(255, 255, 255, 0.16);
+            background-color: rgba(255, 255, 255, 0.17);
         }
 
         .arrow {
             transition: transform 0.3s ease;
-            font-size: 16px;
+            font-size: 17px;
         }
 
         .store-options {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.35s ease-out, padding 0.3s ease-out;
-            background-color: rgba(0, 0, 0, 0.18);
+            background-color: rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: column;
         }
 
         .store-options a, .store-options .copy-option {
-            padding: 16px 22px;
-            min-height: 54px;
+            padding: 18px 24px;
+            min-height: 60px;
             color: #ffffff;
             text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 16px;
+            font-weight: 600;
+            border-top: 1px solid rgba(255, 255, 255, 0.09);
             transition: background-color 0.2s;
             text-align: right;
             display: flex;
@@ -188,7 +188,7 @@
         }
 
         .store-options a:hover, .store-options .copy-option:hover {
-            background-color: rgba(255, 255, 255, 0.12);
+            background-color: rgba(255, 255, 255, 0.13);
         }
 
         .dual-channel-btn {
@@ -196,35 +196,35 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 !important;
-            background-color: rgba(0, 136, 204, 0.24);
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            background-color: rgba(0, 136, 204, 0.26);
+            border-top: 1px solid rgba(255, 255, 255, 0.09);
             overflow: hidden;
         }
 
         .channel-half {
             flex: 1;
-            padding: 16px 10px;
-            min-height: 54px;
+            padding: 18px 12px;
+            min-height: 60px;
             text-align: center;
             color: #ffffff;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 13.5px;
             font-weight: 700;
             transition: background-color 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 5px;
+            gap: 6px;
             line-height: 1.4;
         }
 
         .channel-half:hover {
-            background-color: rgba(255, 255, 255, 0.16);
+            background-color: rgba(255, 255, 255, 0.18);
         }
 
         .channel-divider {
             width: 1px;
-            height: 34px;
+            height: 38px;
             background-color: rgba(255, 255, 255, 0.3);
         }
 
@@ -235,17 +235,17 @@
         }
 
         .option-subtext {
-            font-size: 11.5px;
+            font-size: 12px;
             color: #ffd700;
-            margin-top: 3px;
+            margin-top: 4px;
             font-weight: 600;
         }
 
         .copy-icon-svg {
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             fill: #ffffff;
-            opacity: 0.85;
+            opacity: 0.88;
             transition: opacity 0.2s;
             flex-shrink: 0;
         }
@@ -255,7 +255,7 @@
         }
 
         .store-dropdown.active .store-options {
-            max-height: 520px;
+            max-height: 600px;
         }
 
         .store-dropdown.active .arrow {
@@ -352,7 +352,7 @@
                 <div class="store-options">
                     <a href="https://s.noon.com/RqQ_OuShh-Q" target="_blank">
                         <span>اضغط للتسوق الفوري وتطبيق الخصم</span>
-                        <span style="font-size: 17px;">↗</span>
+                        <span style="font-size: 18px;">↗</span>
                     </a>
                     <div class="copy-option" onclick="copyCode('LQ170A')">
                         <div class="option-text">
@@ -392,11 +392,11 @@
                 <div class="store-options">
                     <a href="https://link.amazon/B09OmCoae" target="_blank">
                         <span>أقوى عروض وخصومات اليوم</span>
-                        <span style="font-size: 17px;">↗</span>
+                        <span style="font-size: 18px;">↗</span>
                     </a>
                     <a href="https://link.amazon/B09A2kdAC" target="_blank">
                         <span>الأكثر مبيعا هذا الأسبوع</span>
-                        <span style="font-size: 17px;">↗</span>
+                        <span style="font-size: 18px;">↗</span>
                     </a>
                     <div class="dual-channel-btn">
                         <a href="https://t.me/Lqtatyy" target="_blank" class="channel-half">
@@ -434,21 +434,46 @@
             dropdown.classList.toggle('active');
         }
 
-        function copyCode(code) {
-            navigator.clipboard.writeText(code).then(() => {
-                const toast = document.getElementById('toast');
-                clearTimeout(toastTimer);
-                toast.classList.remove('show');
-                void toast.offsetWidth;
-                toast.innerText = "تم نسخ (" + code + ") بنجاح!";
-                toast.classList.add('show');
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            clearTimeout(toastTimer);
+            toast.classList.remove('show');
+            void toast.offsetWidth;
+            toast.innerText = message;
+            toast.classList.add('show');
 
-                toastTimer = setTimeout(() => {
-                    toast.classList.remove('show');
-                }, 2500);
-            }).catch(err => {
+            toastTimer = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        function copyCode(code) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(code).then(() => {
+                    showToast("تم نسخ (" + code + ") بنجاح!");
+                }).catch(() => {
+                    fallbackCopy(code);
+                });
+            } else {
+                fallbackCopy(code);
+            }
+        }
+
+        function fallbackCopy(code) {
+            const textarea = document.createElement('textarea');
+            textarea.value = code;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.focus();
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast("تم نسخ (" + code + ") بنجاح!");
+            } catch (err) {
                 console.error('فشل النسخ', err);
-            });
+            }
+            document.body.removeChild(textarea);
         }
     </script>
 
