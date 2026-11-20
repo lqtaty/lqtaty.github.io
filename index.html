@@ -268,6 +268,63 @@
             transform: rotate(180deg);
         }
 
+        /* تنسيق الأسئلة الشائعة داخل نفس ستايل المستطيلات */
+        .faq-item {
+            border-top: 1px solid rgba(255, 255, 255, 0.09);
+        }
+
+        .faq-question {
+            padding: 16px 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: right;
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-sign {
+            font-size: 18px;
+            font-weight: 700;
+            margin-right: 10px;
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: rgba(0, 0, 0, 0.14);
+            text-align: right;
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .faq-answer-inner {
+            padding: 12px 22px 16px 22px;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 240px;
+        }
+
+        .faq-item.open .faq-sign {
+            transform: rotate(45deg);
+        }
+
+        .store-dropdown.active .store-options.faq-panel {
+            max-height: 1200px;
+        }
+
         footer {
             width: 100%;
             padding: 10px 10px 25px 10px;
@@ -419,6 +476,75 @@
                 </div>
             </div>
 
+            <!-- الأسئلة الشائعة -->
+            <div class="store-dropdown" id="faqDropdown">
+                <div class="store-header" onclick="toggleStore('faqDropdown')">
+                    <span>الأسئلة الشائعة</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="store-options faq-panel">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>كيف أتواصل معك؟</span>
+                            <span class="faq-sign">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                تقدر تراسلنا لو عندك أي استفسار؛ ادخل قناتنا على تليجرام أو واتساب من قسم المتجر وتقدر تتواصل معانا بأي وقت.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>كيف أستخدم كود الخصم؟</span>
+                            <span class="faq-sign">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                اضغط «نسخ الكود»، وادخل المتجر، وبعد ما تضيف المنتج للسلة (Cart) روح للسلة وانزل تحت أو في صفحة الدفع والصق الكود في خانة كود الخصم.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>ما في أكواد خصم لأمازون؟</span>
+                            <span class="faq-sign">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                أكيد فيه عروض وخصومات قوية وتنزل وتتغير بسرعة، خلك متابعنا على قنوات التليجرام والواتساب عشان تلقطها أول بأول.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>الكود مو شغال، وش أسوي؟</span>
+                            <span class="faq-sign">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                تأكد من شروط العرض مثل الحد الأدنى للطلب أو الفئات المشمولة، وإذا لسه مو شغال راسلنا على القناة ونفيدك.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>ينفع أستخدم أكثر من كود في نفس الطلب؟</span>
+                            <span class="faq-sign">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                أغلب المتاجر تقبل كود خصم واحد بس في الطلب الواحد.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -441,6 +567,11 @@
                 }
             });
             dropdown.classList.toggle('active');
+        }
+
+        function toggleFaq(questionEl) {
+            const item = questionEl.parentElement;
+            item.classList.toggle('open');
         }
 
         function showToast(message) {
