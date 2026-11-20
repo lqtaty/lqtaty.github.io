@@ -323,7 +323,7 @@
         <h1>Lqtaty</h1>
 
         <p class="bio">
-            وجهتك الأولى لأقوى وأحدث العروض وأكواد الخصم باستمرار<br>تابعنا على باقي المنصات ولا يفوتك أي شي!
+            وجهتك الأولى لأقوى وأحدث العروض وأكواد الخصم باستمرار<br>تابعنا على باقي المنصات ولا تفوتك أي لقطة!
         </p>
 
         <div class="social-icons">
@@ -422,6 +422,8 @@
     <div id="toast">تم نسخ الكود بنجاح!</div>
 
     <script>
+        let toastTimer;
+
         function toggleStore(dropdownId) {
             const dropdown = document.getElementById(dropdownId);
             document.querySelectorAll('.store-dropdown').forEach(item => {
@@ -435,9 +437,15 @@
         function copyCode(code) {
             navigator.clipboard.writeText(code).then(() => {
                 const toast = document.getElementById('toast');
+                clearTimeout(toastTimer);
+                toast.classList.remove('show');
+                void toast.offsetWidth;
                 toast.innerText = "تم نسخ (" + code + ") بنجاح!";
-                toast.className = "show";
-                setTimeout(() => { toast.className = ""; }, 2500);
+                toast.classList.add('show');
+
+                toastTimer = setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2500);
             }).catch(err => {
                 console.error('فشل النسخ', err);
             });
