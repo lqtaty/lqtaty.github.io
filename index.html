@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mitgo-verification" content="1eb7540e-b88c-4c0d-bc89-163fa1a44df1" />
     <title>LQTATY</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -32,23 +31,22 @@
             width: 100%;
             max-width: 390px;
             margin: 0 auto;
-            padding: 32px 18px 24px 18px;
+            padding: 36px 18px 28px 18px;
             flex: 1;
         }
 
-        /* هيدر علوي: اللوجو يمين والبراند يسار */
+        /* هيدر علوي: اللوجو كبير على اليمين */
         .brand-header {
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            margin-bottom: 24px;
+            justify-content: flex-start;
+            margin-bottom: 34px;
         }
         
         .profile-pic-container {
-            width: 104px;
-            height: 104px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             background-color: #ffffff;
             display: flex;
@@ -56,42 +54,12 @@
             justify-content: center;
             overflow: hidden;
             flex-shrink: 0;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.22);
         }
         .profile-pic-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        .brand-title-wrap {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            min-width: 0;
-        }
-        
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 27px;
-            font-weight: 800;
-            margin: 0 0 4px 0;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            direction: ltr;
-            unicode-bidi: isolate;
-            text-align: left;
-            line-height: 1.1;
-            color: #ffffff;
-        }
-
-        .brand-tag {
-            font-size: 12px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.72);
-            letter-spacing: 0.2px;
         }
         
         .social-icons {
@@ -99,8 +67,8 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            max-width: 290px;
-            margin: 0 0 24px 0;
+            max-width: 295px;
+            margin: 0 0 36px 0;
             direction: ltr; 
         }
         
@@ -148,13 +116,13 @@
             mix-blend-mode: screen;
         }
 
-        /* حاوية المتاجر والمستطيلات بمسافات متساوية */
+        /* حاوية المتاجر والمستطيلات بمسافات أوسع */
         .stores-container {
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            margin: 0 0 24px 0;
+            gap: 26px;
+            margin: 0 0 32px 0;
         }
 
         .store-dropdown {
@@ -347,7 +315,7 @@
 
         footer {
             width: 100%;
-            padding: 0 18px 24px 18px;
+            padding: 8px 18px 26px 18px;
             margin-top: auto;
             text-align: center;
         }
@@ -401,11 +369,6 @@
         <div class="brand-header">
             <div class="profile-pic-container">
                 <img src="images/logo.webp" alt="LQTATY Logo">
-            </div>
-
-            <div class="brand-title-wrap">
-                <h1>LQTATY</h1>
-                <span class="brand-tag">عروض وأكواد خصم مختارة</span>
             </div>
         </div>
 
@@ -505,12 +468,12 @@
                 <div class="store-options faq-panel">
                     <div class="faq-item">
                         <div class="faq-question" onclick="toggleFaq(this)">
-                            <span>كيف أتواصل معك؟</span>
+                            <span>كيف اتواصل معكم ؟</span>
                             <span class="faq-sign">+</span>
                         </div>
                         <div class="faq-answer">
                             <div class="faq-answer-inner">
-                                تقدر تراسلنا لو عندك أي استفسار؛ ادخل قناتنا على تليجرام أو واتساب من قسم المتجر وتقدر تتواصل معانا بأي وقت.
+                                تقدروا تراسلونا لو عندكم أي استفسار؛ ادخلوا قناتنا على تليجرام أو واتساب من قسم المتجر وتقدروا تتواصلوا معانا بأي وقت.
                             </div>
                         </div>
                     </div>
