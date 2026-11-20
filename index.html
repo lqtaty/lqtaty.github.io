@@ -34,17 +34,29 @@
             padding: 36px 16px 20px 16px;
             flex: 1;
         }
+
+        /* هيدر أفقي: اللوجو يمين والبراند يسار */
+        .brand-header {
+            width: 100%;
+            max-width: 460px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 0 8px;
+            margin-bottom: 24px;
+        }
         
         .profile-pic-container {
-            width: 96px;
-            height: 96px;
+            width: 108px;
+            height: 108px;
             border-radius: 50%;
             background-color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            margin-bottom: 24px;
+            flex-shrink: 0;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
         .profile-pic-container img {
@@ -55,14 +67,14 @@
         
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
-            margin: 0 0 20px 0;
+            margin: 0;
             letter-spacing: 0.5px;
             direction: ltr;
             unicode-bidi: bidi-override;
-            text-align: center;
-            width: 100%;
+            text-align: left;
+            flex: 1;
         }
 
         p.bio {
@@ -379,11 +391,13 @@
 <body>
 
     <div class="content">
-        <div class="profile-pic-container">
-            <img src="images/logo.webp" alt="Lqtaty Logo">
-        </div>
+        <div class="brand-header">
+            <div class="profile-pic-container">
+                <img src="images/logo.webp" alt="Lqtaty Logo">
+            </div>
 
-        <h1>Lqtaty</h1>
+            <h1>Lqtaty</h1>
+        </div>
 
         <p class="bio">
             وجهتك الأولى لأقوى وأحدث العروض وأكواد الخصم باستمرار<br>تابعنا على باقي المنصات ولا تفوتك أي لقطة!
@@ -409,10 +423,10 @@
 
         <div class="stores-container">
             
-            <!-- متجر نون -->
+            <!-- نون -->
             <div class="store-dropdown" id="noonDropdown">
                 <div class="store-header" onclick="toggleStore('noonDropdown')">
-                    <span>متجر نون - noon</span>
+                    <span>نون - noon</span>
                     <span class="arrow">▼</span>
                 </div>
                 <div class="store-options">
@@ -449,10 +463,10 @@
                 </div>
             </div>
 
-            <!-- متجر أمازون -->
+            <!-- أمازون -->
             <div class="store-dropdown" id="amazonDropdown">
                 <div class="store-header" onclick="toggleStore('amazonDropdown')">
-                    <span>متجر أمازون - Amazon</span>
+                    <span>أمازون - Amazon</span>
                     <span class="arrow">▼</span>
                 </div>
                 <div class="store-options">
