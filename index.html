@@ -31,7 +31,7 @@
             width: 100%;
             max-width: 480px;
             margin: 0 auto;
-            padding: 40px 20px 20px 20px;
+            padding: 36px 18px 20px 18px;
             flex: 1;
         }
         
@@ -44,7 +44,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
         .profile-pic-container img {
@@ -57,7 +57,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 26px;
             font-weight: 700;
-            margin: 0 0 24px 0;
+            margin: 0 0 20px 0;
             letter-spacing: 0.5px;
             direction: ltr;
             unicode-bidi: bidi-override;
@@ -66,11 +66,11 @@
         }
 
         p.bio {
-            font-size: 13px;
-            line-height: 1.6;
-            margin: 0 auto 30px auto;
+            font-size: 13.5px;
+            line-height: 1.65;
+            margin: 0 auto 28px auto;
             padding: 0 10px;
-            max-width: 360px;
+            max-width: 370px;
             font-weight: 400;
             text-align: center;
         }
@@ -79,8 +79,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 215px;
-            margin-bottom: 35px;
+            width: 220px;
+            margin-bottom: 32px;
             direction: ltr; 
         }
         
@@ -122,58 +122,63 @@
             mix-blend-mode: screen;
         }
 
+        /* تكبير حاوية المتاجر والمستطيلات */
         .stores-container {
             width: 100%;
-            max-width: 420px;
+            max-width: 440px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 18px;
         }
 
         .store-dropdown {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            border-radius: 16px;
             overflow: hidden;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
         }
 
         .store-header {
-            padding: 14px 20px;
+            padding: 20px 22px;
+            min-height: 66px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: 700;
             color: #ffffff;
             user-select: none;
         }
 
         .store-header:hover {
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(255, 255, 255, 0.16);
         }
 
         .arrow {
             transition: transform 0.3s ease;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         .store-options {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-            background-color: rgba(0, 0, 0, 0.15);
+            transition: max-height 0.35s ease-out, padding 0.3s ease-out;
+            background-color: rgba(0, 0, 0, 0.18);
             display: flex;
             flex-direction: column;
         }
 
         .store-options a, .store-options .copy-option {
-            padding: 12px 20px;
+            padding: 16px 22px;
+            min-height: 54px;
             color: #ffffff;
             text-decoration: none;
-            font-size: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 15px;
+            font-weight: 500;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             transition: background-color 0.2s;
             text-align: right;
             display: flex;
@@ -183,7 +188,7 @@
         }
 
         .store-options a:hover, .store-options .copy-option:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.12);
         }
 
         .dual-channel-btn {
@@ -191,34 +196,35 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 !important;
-            background-color: rgba(0, 136, 204, 0.2);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: rgba(0, 136, 204, 0.24);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             overflow: hidden;
         }
 
         .channel-half {
             flex: 1;
-            padding: 12px 8px;
+            padding: 16px 10px;
+            min-height: 54px;
             text-align: center;
             color: #ffffff;
             text-decoration: none;
-            font-size: 11.5px;
-            font-weight: 600;
+            font-size: 13px;
+            font-weight: 700;
             transition: background-color 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 4px;
+            gap: 5px;
             line-height: 1.4;
         }
 
         .channel-half:hover {
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(255, 255, 255, 0.16);
         }
 
         .channel-divider {
             width: 1px;
-            height: 28px;
+            height: 34px;
             background-color: rgba(255, 255, 255, 0.3);
         }
 
@@ -229,18 +235,19 @@
         }
 
         .option-subtext {
-            font-size: 11px;
+            font-size: 11.5px;
             color: #ffd700;
-            margin-top: 2px;
+            margin-top: 3px;
             font-weight: 600;
         }
 
         .copy-icon-svg {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             fill: #ffffff;
-            opacity: 0.8;
+            opacity: 0.85;
             transition: opacity 0.2s;
+            flex-shrink: 0;
         }
 
         .copy-option:hover .copy-icon-svg {
@@ -248,7 +255,7 @@
         }
 
         .store-dropdown.active .store-options {
-            max-height: 420px;
+            max-height: 520px;
         }
 
         .store-dropdown.active .arrow {
@@ -345,7 +352,7 @@
                 <div class="store-options">
                     <a href="https://s.noon.com/RqQ_OuShh-Q" target="_blank">
                         <span>اضغط للتسوق الفوري وتطبيق الخصم</span>
-                        <span style="font-size: 16px;">↗</span>
+                        <span style="font-size: 17px;">↗</span>
                     </a>
                     <div class="copy-option" onclick="copyCode('LQ170A')">
                         <div class="option-text">
@@ -385,11 +392,11 @@
                 <div class="store-options">
                     <a href="https://link.amazon/B09OmCoae" target="_blank">
                         <span>أقوى عروض وخصومات اليوم</span>
-                        <span style="font-size: 16px;">↗</span>
+                        <span style="font-size: 17px;">↗</span>
                     </a>
                     <a href="https://link.amazon/B09A2kdAC" target="_blank">
                         <span>الأكثر مبيعا هذا الأسبوع</span>
-                        <span style="font-size: 16px;">↗</span>
+                        <span style="font-size: 17px;">↗</span>
                     </a>
                     <div class="dual-channel-btn">
                         <a href="https://t.me/Lqtatyy" target="_blank" class="channel-half">
