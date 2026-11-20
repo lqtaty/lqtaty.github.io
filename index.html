@@ -20,7 +20,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            min-height: 100vh;
+            min-height: 112vh;
             text-align: center;
             -webkit-font-smoothing: antialiased;
         }
@@ -32,11 +32,11 @@
             width: 100%;
             max-width: 390px;
             margin: 0 auto;
-            padding: 38px 18px 28px 18px;
+            padding: 38px 18px 44px 18px;
             flex: 1;
         }
 
-        /* هيدر علوي: الصورة تقرب للنص من اليمين والاسم يقرب للنص من اليسار */
+        /* هيدر علوي: ثابت في مكانه بدون رفع لأعلى */
         .brand-header {
             width: 100%;
             display: flex;
@@ -84,20 +84,21 @@
             font-size: 13.5px;
             font-weight: 600;
             line-height: 1.5;
-            margin: 0 0 14px 0;
+            margin: 0 0 24px 0;
             color: rgba(255, 255, 255, 0.92);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
         
+        /* مسافة متساوية فوق الأيقونات (24px) وتحتها (24px) */
         .social-icons {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
             max-width: 295px;
-            margin: 0 0 38px 0;
+            margin: 0 0 24px 0;
             direction: ltr; 
         }
         
@@ -145,13 +146,13 @@
             mix-blend-mode: screen;
         }
 
-        /* حاوية المتاجر والمستطيلات بمسافات أوسع */
+        /* حاوية المتاجر والمستطيلات بمسافات أوسع بينها ودفع للأسفل */
         .stores-container {
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 26px;
-            margin: 0 0 32px 0;
+            gap: 32px;
+            margin: 14px 0 90px 0;
         }
 
         .store-dropdown {
@@ -344,7 +345,7 @@
 
         footer {
             width: 100%;
-            padding: 8px 18px 26px 18px;
+            padding: 36px 18px 34px 18px;
             margin-top: auto;
             text-align: center;
         }
