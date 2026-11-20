@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mitgo-verification" content="1eb7540e-b88c-4c0d-bc89-163fa1a44df1" />
     <title>LQTATY</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -22,6 +22,7 @@
             justify-content: flex-start;
             min-height: 100vh;
             text-align: center;
+            -webkit-font-smoothing: antialiased;
         }
         
         .content {
@@ -29,27 +30,25 @@
             flex-direction: column;
             align-items: center;
             width: 100%;
-            max-width: 480px;
+            max-width: 390px;
             margin: 0 auto;
-            padding: 36px 16px 24px 16px;
+            padding: 32px 18px 24px 18px;
             flex: 1;
         }
 
-        /* هيدر أفقي: اللوجو يمين والبراند يسار */
+        /* هيدر علوي: اللوجو يمين والبراند يسار */
         .brand-header {
             width: 100%;
-            max-width: 460px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 16px;
-            padding: 0 8px;
-            margin-bottom: 14px;
+            margin-bottom: 24px;
         }
         
         .profile-pic-container {
-            width: 108px;
-            height: 108px;
+            width: 104px;
+            height: 104px;
             border-radius: 50%;
             background-color: #ffffff;
             display: flex;
@@ -57,7 +56,7 @@
             justify-content: center;
             overflow: hidden;
             flex-shrink: 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.18);
         }
         .profile-pic-container img {
             width: 100%;
@@ -65,45 +64,45 @@
             object-fit: cover;
         }
 
-        .brand-identity {
+        .brand-title-wrap {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            text-align: left;
+            justify-content: center;
             min-width: 0;
         }
         
         h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 27px;
             font-weight: 800;
-            margin: 0 0 8px 0;
-            letter-spacing: 2.2px;
+            margin: 0 0 4px 0;
+            letter-spacing: 2px;
             text-transform: uppercase;
             direction: ltr;
             unicode-bidi: isolate;
             text-align: left;
-            line-height: 1.05;
+            line-height: 1.1;
+            color: #ffffff;
         }
 
-        /* بايو تحت اسم البراند بأسلوب بروفايل إنستجرام / تيك توك */
-        .social-bio-card {
-            width: 100%;
-            direction: rtl;
-            text-align: right;
-            background-color: rgba(255, 255, 255, 0.07);
-            border-right: 3px solid rgba(255, 255, 255, 0.45);
-            border-radius: 10px;
-            padding: 9px 12px;
+        .brand-tag {
+            font-size: 12px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.72);
+            letter-spacing: 0.2px;
         }
 
+        /* بايو نظيف بأسلوب بروفايل إنستجرام / تيك توك */
         p.bio {
-            font-size: 13.5px;
-            line-height: 1.55;
-            margin: 0;
+            width: 100%;
+            font-size: 15px;
+            line-height: 1.65;
+            margin: 0 0 24px 0;
+            padding: 0 4px;
             font-weight: 500;
-            text-align: right;
+            text-align: center;
             color: rgba(255, 255, 255, 0.95);
         }
         
@@ -111,9 +110,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 265px;
-            margin-top: 16px;
-            margin-bottom: 46px;
+            width: 100%;
+            max-width: 290px;
+            margin: 0 0 24px 0;
             direction: ltr; 
         }
         
@@ -161,14 +160,13 @@
             mix-blend-mode: screen;
         }
 
-        /* تكبير حاوية المتاجر والمستطيلات ونزولها للأسفل */
+        /* حاوية المتاجر والمستطيلات بمسافات متساوية */
         .stores-container {
             width: 100%;
-            max-width: 460px;
             display: flex;
             flex-direction: column;
             gap: 20px;
-            margin-top: 6px;
+            margin: 0 0 24px 0;
         }
 
         .store-dropdown {
@@ -181,13 +179,13 @@
         }
 
         .store-header {
-            padding: 22px 24px;
-            min-height: 72px;
+            padding: 20px 22px;
+            min-height: 70px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            font-size: 19px;
+            font-size: 18.5px;
             font-weight: 700;
             color: #ffffff;
             user-select: none;
@@ -199,7 +197,7 @@
 
         .arrow {
             transition: transform 0.3s ease;
-            font-size: 17px;
+            font-size: 16px;
         }
 
         .store-options {
@@ -212,11 +210,11 @@
         }
 
         .store-options a, .store-options .copy-option {
-            padding: 18px 24px;
+            padding: 18px 22px;
             min-height: 60px;
             color: #ffffff;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15.5px;
             font-weight: 600;
             border-top: 1px solid rgba(255, 255, 255, 0.09);
             transition: background-color 0.2s;
@@ -361,7 +359,7 @@
 
         footer {
             width: 100%;
-            padding: 10px 10px 25px 10px;
+            padding: 0 18px 24px 18px;
             margin-top: auto;
             text-align: center;
         }
@@ -374,9 +372,8 @@
             text-align: center;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             width: 100%;
-            max-width: 480px;
+            max-width: 390px;
             margin: 0 auto;
-            padding: 0 10px;
         }
 
         #toast {
@@ -418,15 +415,15 @@
                 <img src="images/logo.webp" alt="LQTATY Logo">
             </div>
 
-            <div class="brand-identity">
+            <div class="brand-title-wrap">
                 <h1>LQTATY</h1>
-                <div class="social-bio-card">
-                    <p class="bio">
-                        وجهتك الأولى لأقوى وأحدث العروض وأكواد الخصم باستمرار<br>تابعنا على باقي المنصات ولا تفوتك أي لقطة!
-                    </p>
-                </div>
+                <span class="brand-tag">عروض وأكواد خصم مختارة</span>
             </div>
         </div>
+
+        <p class="bio">
+            كل اللقطات وأقوى أكواد نون وأمازون أول بأول<br>افتح قسمك وادخل قنواتنا عشان توصلك الصفقات قبل تخلص!
+        </p>
 
         <div class="social-icons">
             <a href="https://snapchat.com/t/4Q07ZWMR" target="_blank" aria-label="Snapchat">
